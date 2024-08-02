@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - KantaGallo Resto - Bar</title>
+    <link rel="stylesheet" href="{% static 'css/styless.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <p>LUNES A DOMINGO 6:00 P.M. A 11:00 P.M.</p>
+        </div>
+        <nav>
+            <img src="{% static 'img/kan1.png' %}" alt="Logo" class="nav-logo">
+            <ul>
+                <li class="nav-item"><a href="{% url 'index' %}">INICIO</a></li>
+                <li class="nav-item"><a href="{% url 'nosotros' %}">NOSOTROS</a></li>
+                <li class="nav-item"><a href="{% url 'cartas' %}">CARTA</a></li>
+                <li class="nav-item"><a href="{% url 'reservas' %}">RESERVAS</a></li>
+                <li class="nav-item"><a href="{% url 'galeria' %}">GALERÍA</a></li>
+                <li class="nav-item"><a href="{% url 'contactenos' %}">CONTÁCTENOS</a></li>
+                <li class="nav-item"><a href="{% url 'cuentaCliente' %}">mi cuenta</a></li>
+                <li class="nav-item"><a href="{% url 'PaginaNuevoCliente' %}">Registro</a></li>
+                <li class="nav-item"><a href="{% url 'paginaLogin' %}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <header class="hero-header">
+        <div class="hero-content">
+            <h1>Nosotros</h1>
+            <p>Bar y Parrillas</p>
+        </div>
+    </header>
+    <main>
+        <section class="nuestra-historia">
+            <div class="historia-container">
+                <img src="{% static 'img/entrada2.jpeg' %}" alt="Imagen del restaurante" class="historia-imagen">
+                <div class="historia-texto">
+                    <h2 class="historia">Nuestra Historia</h2>
+                    <p>En Enero del 2018, nace KantaGallo Resto-Bar, un emprendimiento familiar lleno de pasión y
+                        dedicación en cada detalle. Nuestro plato estrella es la parrillada, con la que hemos
+                        conquistado a todos nuestros clientes desde el primer día. Guardamos nuestro sabor especial,
+                        hecho a base de tradición, cariño y hospitalidad. Esa es nuestra receta secreta.</p>
+                    <p>Nuestro fundador trabajó muchos años en el extranjero, siendo un embajador de nuestra gastronomía
+                        peruana. Allá preparaba más de 50 platos con sabor a Perú, llevando nuestra cocina a distintos
+                        paladares del mundo. Toda esa experiencia la trajo aquí, a su emprendimiento familiar, donde
+                        fusiona su amor por la cocina con el deseo de ofrecer un lugar acogedor y auténtico para
+                        disfrutar de una comida excepcional.</p>
+                </div>
+            </div>
+        </section>
+        <section class="mision-vision">
+            <div class="mision">
+                <h2>Misión</h2>
+                <p>Ser el Mejor Restaurante a nivel nacional e internacional por nuestra gastronomía, servicio de
+                    calidad y por los ambientes acogedores que tenemos para que disfruten una buena experiencia, somos
+                    un grupo de trabajo original, sólido y profesional, con calidad humana y principios éticos, que
+                    ofrece servicios y productos de excelencia a sus comensales.</p>
+            </div>
+            <div class="vision">
+                <h2>Visión</h2>
+                <p>Satisfacer las necesidades gastronómicas de nuestros clientes, ofreciendo alimentos y servicios con
+                    la más alta calidad, donde se sobrepasen las expectativas de nuestros clientes, creando un ambiente
+                    agradable para disfrutar entre familiares y amigos. Tomando como estrategia principal el
+                    mejoramiento continuo de nuestros procesos de liderazgo, el buen servicio y nuestro personal.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="{% static 'img/kan.jpeg' %}" alt="El Ruedo">
+            </div>
+            <div class="footer-section">
+                <h3>HORARIOS</h3>
+                <p>Lunes a Domingo:<br>6:00 p.m. a 11:00 p.m.</p>
+            </div>
+            <div class="footer-section">
+                <h3>PEDIDOS Y RESERVAS</h3>
+                <p>KantaGallo:<br>978-550-386</p>
+            </div>
+            <div class="footer-section">
+                <h3>UBICACION</h3>
+                <p>Carretera Federico Basadre S/N-Aguaytía<br>Al costado de la SubRegión</p>
+            </div>
+            <div class="social-media">
+                <h3>SÍGUENOS EN:</h3>
+                <a href="https://www.facebook.com/tu_pagina" target="_blank" rel="noopener noreferrer">
+                    <img src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-1-2.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/tu_perfil" target="_blank" rel="noopener noreferrer">
+                    <img src="https://th.bing.com/th?id=OIP.bUnn03oLUdm1hqE6AwEdqAHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+                        alt="Instagram">
+                </a>
+                <a href="https://www.tiktok.com/@tu_perfil" target="_blank" rel="noopener noreferrer">
+                    <img src="https://static.vecteezy.com/system/resources/previews/016/716/450/original/tiktok-icon-free-png.png"
+                        alt="TikTok">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 KantaGallo RESTO-BAR. Todos los derechos reservados.</p>
+            <p>Diseñado y desarrollado por <a href="#">Web Developer</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

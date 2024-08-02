@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias - KantaGallo Resto-Bar</title>
+    <link rel="stylesheet" href="{% static 'css/styless.css' %}">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <p>LUNES A DOMINGO 6:00 P.M. A 11:00 P.M.</p>
+        </div>
+        <nav>
+            <img src="{% static 'img/kan1.png' %}" alt="Logo" class="nav-logo">
+            <ul>
+                <li class="nav-item"><a href="{% url 'index' %}">INICIO</a></li>
+                <li class="nav-item"><a href="{% url 'nosotros' %}">NOSOTROS</a></li>
+                <li class="nav-item"><a href="{% url 'cartas' %}">CARTA</a></li>
+                <li class="nav-item"><a href="{% url 'reservas' %}">RESERVAS</a></li>
+                <li class="nav-item"><a href="{% url 'galeria' %}">GALERÍA</a></li>
+                <li class="nav-item"><a href="{% url 'contactenos' %}">CONTÁCTENOS</a></li>
+                <li class="nav-item"><a href="{% url 'cuentaCliente' %}">mi cuenta</a></li>
+                <li class="nav-item"><a href="{% url 'PaginaNuevoCliente' %}">Registro</a></li>
+                <li class="nav-item"><a href="{% url 'paginaLogin' %}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Gracias por comunicarte con nosotros</h1>
+        <p>Nos pondremos en contacto lo más pronto posible.</p>
+    </main>
+   
+    
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 KantaGallo RESTO-BAR. Todos los derechos reservados.</p>
+        <p>Diseñado y desarrollado por <a href="#">Web Developer</a></p>
+    </div>
+</body>
+</html>

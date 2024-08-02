@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KantaGallo Resto - Bar | Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/styless.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .dashboard-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-top: 50px;
+        }
+        .dashboard-header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 20px;
+        }
+        .dashboard-content {
+            padding: 20px;
+        }
+        .dashboard-item {
+            background-color: #ffcdd2;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        .dashboard-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .btn-danger {
+            background-color: #d32f2f;
+            border: none;
+        }
+        .btn-danger:hover {
+            background-color: #b71c1c;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <p>LUNES A DOMINGO 6:00 P.M. A 11:00 P.M.</p>
+        </div>
+        <nav>
+            <img src="{% static 'img/kan1.png' %}" alt="Logo" class="nav-logo">
+            <ul>
+                <li class="nav-item"><a href="{% url 'index' %}">INICIO</a></li>
+                <li class="nav-item"><a href="{% url 'nosotros' %}">NOSOTROS</a></li>
+                <li class="nav-item"><a href="{% url 'cartas' %}">CARTA</a></li>
+                <li class="nav-item"><a href="{% url 'reservas' %}">RESERVAS</a></li>
+                <li class="nav-item"><a href="{% url 'galeria' %}">GALERÍA</a></li>
+                <li class="nav-item"><a href="{% url 'contactenos' %}">CONTÁCTENOS</a></li>
+                <li class="nav-item"><a href="{% url 'cuentaCliente' %}">mi cuenta</a></li>
+                <li class="nav-item"><a href="{% url 'PaginaNuevoCliente' %}">Registro</a></li>
+                <li class="nav-item"><a href="{% url 'paginaLogin' %}">Login</a></li>
+                <li class="nav-item"><a href="{% url 'SalirCliente' %}">CERRAR SESION</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container dashboard-container animate__animated animate__fadeIn">
+        <div class="dashboard-header">
+            <h2><i class="fas fa-user-circle"></i> Bienvenido, {{ request.user.username }}</h2>
+        </div>
+        <div class="dashboard-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="dashboard-item animate__animated animate__bounceIn">
+                        <h3><i class="fas fa-utensils"></i> Mis Reservas</h3>
+                        <p>Revisa tus reservas actuales y pasadas.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="dashboard-item animate__animated animate__bounceIn animate__delay-1s">
+                        <h3><i class="fas fa-star"></i> Mis Favoritos</h3>
+                        <p>Explora tus platos y bebidas favoritas.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="dashboard-item animate__animated animate__bounceIn animate__delay-2s">
+                        <h3><i class="fas fa-cog"></i> Configuración</h3>
+                        <p>Actualiza tu información personal.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="{% url 'SalirCliente' %}" class="btn btn-danger btn-lg animate__animated animate__pulse animate__infinite">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                </a>
+            </div>
+        </div>
+    </div>
+   
+    <div class="footer-bottom">
+        <p>&copy; 2024 KantaGallo RESTO-BAR. Todos los derechos reservados.</p>
+        <p>Diseñado y desarrollado por <a href="#">Web Developer</a></p>
+    </div>
+</body>
+
+</html>

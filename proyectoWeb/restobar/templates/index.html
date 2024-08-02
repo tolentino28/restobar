@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KantaGallo Resto - Bar</title>
+    <link rel="stylesheet" href="{% static 'css/styless.css' %}">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <p>LUNES A DOMINGO 6:00 P.M. A 11:00 P.M.</p>
+        </div>
+        <nav>
+            <img src="{% static 'img/kan1.png' %}"alt="Logo" class="nav-logo">
+            <ul>
+                <li class="nav-item"><a href="{% url 'index' %}">INICIO</a></li>
+                <li class="nav-item"><a href="{% url 'nosotros' %}">NOSOTROS</a></li>
+                <li class="nav-item"><a href="{% url 'cartas' %}">CARTA</a></li>
+                <li class="nav-item"><a href="{% url 'reservas' %}">RESERVAS</a></li>
+                <li class="nav-item"><a href="{% url 'galeria' %}">GALERÍA</a></li>
+                <li class="nav-item"><a href="{% url 'contactenos' %}">CONTÁCTENOS</a></li>
+                <li class="nav-item"><a href="{% url 'cuentaCliente' %}">mi cuenta</a></li>
+                <li class="nav-item"><a href="{% url 'PaginaNuevoCliente' %}">Registro</a></li>
+                <li class="nav-item"><a href="{% url 'paginaLogin' %}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="heros">
+            <div class="overlays"></div>
+            <div class="contents">
+                <h1>NUESTROS PLATOS</h1>
+                <p>DISFRUTE DE NUESTRA VARIEDAD DE COMIDA QUE TENEMOS PARA TI</p>
+                <a href="{% url 'cartas' %}" class="btns">VER CARTA</a>
+            </div>
+        </section>
+    </main>      
+    <div class="container1">
+        <div class="header1">
+            <h1>EMPIEZA TU PEDIDO AHORA</h1>
+        </div>
+        <div class="menu-grid1">
+            <div class="column">
+                <div class="menu-item1">
+                    <img src="{% static 'img/tacacho.jpeg' %}" alt="Platos">
+                    <div class="overlay">
+                        <h3>PLATOS</h3>
+                        <button><a href="{% url 'cartas' %}" class="btn">VER CARTA</a></button>
+                    </div>
+                </div>
+                <div class="menu-item2">
+                    <img src="{% static 'img/postre.jpg' %}" alt="Postres">
+                    <div class="overlay">
+                        <h3>POSTRES</h3>
+                        <button><a href="{% url 'cartas' %}" class="btn">VER CARTA</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="menu-item3">
+                    <img src="{% static 'img/vit2.png' %}" alt="Cocteles">
+                    <div class="overlay">
+                        <h3>COCTELES</h3>
+                        <button><a href="{% url 'cartas' %}" class="btn">VER CARTA</a></button>
+                    </div>
+                </div>
+                <div class="menu-item4">
+                    <img src="{% static 'img/mesas.jpeg' %}" alt="Reservas">
+                    <div class="overlay">
+                        <h3>RESERVAS</h3>
+                        <button><a href="{% url 'reservas' %}"> HACER RESERVAS</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section class="dishes-section">
+        <img src="{% static 'img/platos.png' %}" alt="Dish 1">
+        <img src="{% static 'img/vit.png' %}" alt="Dish 2">
+        <img src="{% static 'img/tacacho.jpeg' %}" alt="Dish 3">
+        <img src="{% static 'img/vit2.png' %}" alt="Dish 4">
+        <img src="https://comidasvenezolanas.org/wp-content/uploads/2021/02/parrilla-venezolana_700x466.jpg" alt="Dish 5">
+    </section>       
+
+    <div class="container">
+        <h1>EMPIEZA TU PEDIDO AHORA</h1>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://d2j6dbq0eux0bg.cloudfront.net/images/88907252/3707576118.jpg" alt="Pedido">
+                <h3>PEDIDO</h3>
+            </div>
+            <div class="menu-item">
+                <img src="{% static 'img/entrada.jpeg' %}" alt="Dirección">
+                <h3>DIRECCIÓN</h3>
+            </div>
+            <div class="menu-item">
+                <img src="https://th.bing.com/th/id/OIP.RsXmBfXSGYY786v-EUPAGwHaE8?rs=1&pid=ImgDetMain" alt="Delivery">
+                <h3>DELIVERY</h3>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.ytimg.com/vi/y3g9KiKaD8I/maxresdefault.jpg" alt="Entrega">
+                <h3>ENTREGA</h3>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="{% static 'img/kan.jpeg' %}" alt="KantaGallo">
+            </div>
+            <div class="footer-section">
+                <h3>HORARIOS</h3>
+                <p>Lunes a Domingo:<br>6:00 p.m. a 11:00 p.m.</p>
+            </div>
+            <div class="footer-section">
+                <h3>PEDIDOS Y RESERVAS</h3>
+                <p>KantaGallo:<br>978-550-386</p>
+            </div>
+            <div class="footer-section">
+                <h3>UBICACION</h3>
+                <p>Carretera Federico Basadre S/N-Aguaytia<br>Al costado de la SubRegion</p>
+            </div>
+            <div class="social-media">
+                <h3>SÍGUENOS EN:</h3>
+                <a href="https://www.facebook.com/tu_pagina" target="_blank" rel="noopener noreferrer">
+                    <img src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-1-2.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/tu_perfil" target="_blank" rel="noopener noreferrer">
+                    <img src="https://th.bing.com/th?id=OIP.bUnn03oLUdm1hqE6AwEdqAHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Instagram">
+                </a>
+                <a href="https://www.tiktok.com/@tu_perfil" target="_blank" rel="noopener noreferrer">
+                    <img src="https://static.vecteezy.com/system/resources/previews/016/716/450/original/tiktok-icon-free-png.png" alt="TikTok">
+                </a>
+            </div>            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 KantaGallo RESTO-BAR. Todos los derechos reservados.</p>
+            <p>Diseñado y desarrollado por <a href="#">Web Developer</a></p>
+        </div>
+    </footer>
+</body>
+</html>
